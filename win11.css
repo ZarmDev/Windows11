@@ -76,21 +76,28 @@ body {
 }
 #pinned {
     display: flex;
-    justify-content: center;
 }
 #pinned img {
     width: 3ch;
     height: 3ch;
+    position: relative;
+    left: 4.5ch;
+    bottom: 2ch;
 }
 #pinned div {
     border-radius: 5px;
-    margin: 2vw;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7ch;
+    width: 12.98ch;
 }
 #pinned div:hover {
     background-color: rgb(216, 216, 216);
 }
 #pinned span {
     position: relative;
-    top: 3.2ch;
-    right: 6.2ch;
+    top: 1.5ch;
+    right: 1.7ch;
 }
