@@ -1,0 +1,73 @@
+body {
+    overflow: hidden;
+    background-image: url(https://image.shutterstock.com/image-vector/windows-vector-icon-eps-10-600w-1432340681.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -25% 25%;
+}
+#bottomContainer {
+    background-color: #dce0ecd3;
+    width: 100%;
+    height: 3rem;
+    position: absolute;
+    float: left;
+    top: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+#bottomContainer img {
+    width: 3ch;
+    height: fit-content;
+    padding: 1vw;
+    border-radius: 10px;
+    margin: 0.5vw;
+    transition: 0.1s;
+}
+#bottomContainer img:hover {
+    background: rgba(255, 255, 255, 0.432);
+}
+#bottomContainer img:active {
+    transform: scale(0.9);
+}
+#windowsClick {
+    background-color: #e1e6f7;
+    width: calc(24rem + 10ch + 10% - 1em);
+    height: 57ch;
+    position: absolute;
+    border-radius: 10px;
+    left: calc(31% - 16ch + 8vw);
+    visibility: hidden;
+}
+#windowsClick > * {
+    padding-left: 6vw;
+}
+#accountControls {
+    position: absolute;
+    width: calc(50ch + 10vw + 1.245cm);
+    top: 50.7ch;
+    background-color: #dee6f1;
+    border-radius: 10px;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.05vw;
+}
+#accountControls img {
+    width: 3ch;
+    height: 3ch;
+}
+#accountControls > * {
+    position: relative;
+}
+#accountControls > *:nth-child(1) {
+    right: 24ch;
+}
+#accountControls > *:nth-child(2) {
+    right: 22ch;
+}
+#accountControls > *:nth-child(3) {
+    left: 22ch;
+}
