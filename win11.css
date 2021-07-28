@@ -1,3 +1,6 @@
+* {
+    font-family: "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;;
+}
 body {
     overflow: hidden;
     background-image: url(https://image.shutterstock.com/image-vector/windows-vector-icon-eps-10-600w-1432340681.jpg);
@@ -45,9 +48,9 @@ body {
 }
 #accountControls {
     position: absolute;
-    width: calc(50ch + 10vw + 1.245cm);
+    width: calc(50ch + 10vw + 0.59cm);
     top: 50.7ch;
-    background-color: #dee6f1;
+    background-color: #eff2f7;
     border-radius: 10px;
     padding-left: 0;
     display: flex;
@@ -70,4 +73,24 @@ body {
 }
 #accountControls > *:nth-child(3) {
     left: 22ch;
+}
+#pinned {
+    display: flex;
+    justify-content: center;
+}
+#pinned img {
+    width: 3ch;
+    height: 3ch;
+}
+#pinned div {
+    border-radius: 5px;
+    margin: 2vw;
+}
+#pinned div:hover {
+    background-color: rgb(216, 216, 216);
+}
+#pinned span {
+    position: relative;
+    top: 3.2ch;
+    right: 6.2ch;
 }
