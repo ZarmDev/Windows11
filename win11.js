@@ -58,3 +58,15 @@ navigator.getBattery().then(function(battery) {
 } catch {
     batteryLevel.src = 'https://img.icons8.com/fluent/48/000000/no-battery.png';
 }
+
+for (var i = 0; i < document.getElementsByTagName('span').length; i++) {
+    var lenT = document.getElementsByTagName('span')[i];
+    console.log(lenT.textContent.length);
+    if (lenT.textContent.length > 10) {
+        lenT.style.right = `${lenT.textContent.length - lenT.textContent.length * 0.6}ch`;
+    } else if (lenT.textContent.length >= 6) {
+        lenT.style.right = `${lenT.textContent.length - lenT.textContent.length * 0.25}ch`;
+    } else {
+        lenT.style.right = `${lenT.textContent.length - lenT.textContent.length * 0.015}ch`;
+    }
+}
