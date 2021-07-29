@@ -34,6 +34,9 @@ body {
 #bottomContainer img:active {
     transform: scale(0.9);
 }
+#bottomContainer img:nth-child(9) {
+    transform: rotateZ(180deg);
+}
 #windowsClick {
     background-color: #e1e6f7;
     width: calc(24rem + 10ch + 10% - 1em);
@@ -78,26 +81,36 @@ body {
     display: flex;
 }
 #pinned img {
-    width: 3ch;
-    height: 3ch;
-    position: relative;
-    left: 4.5ch;
-    bottom: 2ch;
+    width: 3.95ch;
+    height: 3.95ch;
+    margin: auto;
 }
 #pinned div {
     border-radius: 5px;
-    padding: 1vw;
+    padding: 1.5vw;
+    padding-bottom: 2vw;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 7ch;
-    width: 12.98ch;
+    /* height: 7ch; */
+    /* width: 12.98ch; */
+    height: 4ch;
+    width: 4ch;
+    margin: 0.2vw;
 }
 #pinned div:hover {
-    background-color: rgb(216, 216, 216);
+    background-color: rgba(255, 255, 255, 0.644);
+}
+#pinned div:active {
+    transform: scale(0.95) skewX(1deg);
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.404);
 }
 #pinned span {
     position: relative;
-    top: 1.5ch;
-    right: 1.7ch;
+    top: 4ch;
+    right: 7ch;
+    font-size: small;
+    margin: 1vw 1vw 1vw auto;
+}
+.smallChar {
+    right: 4.2ch !important;
 }
