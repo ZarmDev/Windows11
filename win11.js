@@ -2,6 +2,7 @@ const windowsClick = document.getElementById('windowsClick');
 
 const windows = document.getElementById('windows');
 
+const batteryLevel = document.getElementById('battery-level');
 
 window.toggled = false;
 
@@ -38,3 +39,22 @@ windows.addEventListener('mousedown', function () {
         }, 1)
     }
 })
+
+try {
+navigator.getBattery().then(function(battery) {
+    if (battery.level >= 0.95) {
+        batteryLevel.src = 'https://img.icons8.com/fluent/48/000000/full-battery.png';
+    } else if (battery.level >= 0.50) {
+        batteryLevel.src = 'https://img.icons8.com/fluent/48/000000/medium-battery.png';
+    } else if (battery.level < 0.50) {
+        batteryLevel.src = 'https://img.icons8.com/fluent/48/000000/low-battery.png';
+    } else if (battery.level == 0) {
+        batteryLevel.src = 'https://img.icons8.com/fluent/48/000000/empty-battery.png';
+    }
+    if (battery.charging == true) {
+        batteryLevel.src = 'https://img.icons8.com/fluent/48/000000/charge-battery.png';
+    }
+})
+} catch {
+    batteryLevel.src = 'https://img.icons8.com/fluent/48/000000/no-battery.png';
+}
