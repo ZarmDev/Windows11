@@ -103,6 +103,10 @@ body {
 #accountControls > *:nth-child(3) {
     left: 22ch;
 }
+#accountControls > *:nth-child(3):hover {
+    background: rgba(224, 224, 224, 0.432);
+    border-radius: 10px;
+}
 #pinned {
     display: flex;
 }
