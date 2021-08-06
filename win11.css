@@ -222,8 +222,6 @@ body {
 #square {
     position: absolute;
     background-color: rgba(186, 230, 233, 0.459);
-    width: 4vw;
-    height: 4vw;
 }
 * {
     user-select: none;

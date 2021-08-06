@@ -64,19 +64,21 @@ wallpaper.addEventListener('mousedown', function (e) {
     square.style.visibility = 'visible';
     square.style.width = '0';
     square.style.height = '0';
-    square.style.padding = '0';
     setTimeout(function () {
         window.myInterval3 = setInterval(function () {
             // console.log(square.style);
             if (window.y > e.clientY) {
-                square.style.paddingTop = `${window.y - e.clientY}px`;
+                square.style.height = `${window.y - e.clientY}px`;
             } else {
-                square.style.paddingBottom = `${e.clientY - window.y}px`;
+                square.style.top = `${window.y}px`;
+                square.style.height = `${e.clientY - window.y}px`;
             }
             if (window.x > e.clientX) {
-                square.style.paddingLeft = `${window.x - e.clientX}px`;
+                square.style.width = `${window.x - e.clientX}px`;
+                square.style.left = `${e.clientX}px`;
             } else {
-                square.style.paddingRight = `${e.clientX - window.x}px`;
+                square.style.left = `${window.x}px`;
+                square.style.width = `${e.clientX - window.x}px`;
             }
         }, 10)
     }, 100)
