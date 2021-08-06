@@ -203,6 +203,9 @@ body {
     grid-template-columns: repeat(10, 8ch);
     grid-gap: 10px;
 }
+#wallpaper * {
+    z-index: 2;
+}
 #wallpaper *:nth-child(1) {
     grid-area: Recycle_Bin;
 }
@@ -225,4 +228,7 @@ body {
 }
 * {
     user-select: none;
+}
+a {
+    opacity: 0.1;
 }
