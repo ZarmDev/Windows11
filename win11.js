@@ -6,6 +6,8 @@ const batteryLevel = document.getElementById('battery-level');
 
 const wallpaper = document.getElementById('wallpaper');
 
+const square = document.getElementById('square');
+
 window.toggled = false;
 
 windows.addEventListener('mousedown', function () {
@@ -44,8 +46,50 @@ windows.addEventListener('mousedown', function () {
 
 window.check = false;
 
+window.myInterval3 = undefined;
+
+window.x = undefined;
+
+window.y = undefined;
+
+wallpaper.addEventListener('mousemove', function (e) {
+    window.x = e.clientX;
+    window.y = e.clientY;
+})
+
 wallpaper.addEventListener('mousedown', function (e) {
     window.check = true;
+    square.style.left = `${e.clientX}px`;
+    square.style.top = `${e.clientY}px`;
+    square.style.visibility = 'visible';
+    square.style.width = '0';
+    square.style.height = '0';
+    square.style.padding = '0';
+    setTimeout(function () {
+        window.myInterval3 = setInterval(function () {
+            // console.log(square.style);
+            if (window.y > e.clientY) {
+                square.style.paddingTop = `${window.y - e.clientY}px`;
+            } else {
+                square.style.paddingBottom = `${e.clientY - window.y}px`;
+            }
+            if (window.x > e.clientX) {
+                square.style.paddingLeft = `${window.x - e.clientX}px`;
+            } else {
+                square.style.paddingRight = `${e.clientX - window.x}px`;
+            }
+        }, 10)
+    }, 100)
+})
+
+wallpaper.addEventListener('mouseup', function (e) {
+    clearInterval(window.myInterval3)
+    square.style.visibility = 'hidden';
+})
+
+square.addEventListener('mouseup', function (e) {
+    clearInterval(window.myInterval3)
+    square.style.visibility = 'hidden';
 })
 
 document.getElementsByTagName('html')[0].addEventListener('mousedown', function () {

@@ -7,6 +7,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -25% 25%;
+    object-fit: cover;
 }
 #bottomContainer {
     background-color: #dce0ecbd;
@@ -180,4 +181,50 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+#searchClick {
+    background-color: #e1e6f7c9;
+    width: calc(24rem + 10ch + 10% - 1em);
+    height: 57ch;
+    position: absolute;
+    border-radius: 10px;
+    left: calc(31% - 16ch + 8vw);
+    visibility: hidden;
+    backdrop-filter: blur(2px);
+}
+#searchClick > * {
+    padding-left: 6vw;
+}
+#wallpaper {
+    display: grid;
+    grid-template-areas: "Recycle_Bin"
+                         "About";
+    grid-template-rows: repeat(10, 9ch);
+    grid-template-columns: repeat(10, 8ch);
+    grid-gap: 10px;
+}
+#wallpaper *:nth-child(1) {
+    grid-area: Recycle_Bin;
+}
+#wallpaper *:nth-child(2) {
+    grid-area: About;
+}
+#wallpaper img {
+    width: 3vw;
+    height: 3vw;
+}
+#wallpaper span {
+    text-align: center;
+}
+#wallpaper span:hover {
+    background-color: rgba(186, 230, 233, 0.459);
+}
+#square {
+    position: absolute;
+    background-color: rgba(186, 230, 233, 0.459);
+    width: 4vw;
+    height: 4vw;
+}
+* {
+    user-select: none;
 }
